@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* --------------Navbar----------------  */
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            padding: 2px;
+            display: block;
+            /* display: flex; */
+            /* align-items: center;
+            justify-content: center; */
+            margin: 0 auto;
+        }
+
+        .logo {
+
+            color: aliceblue;
+            text-align: center;
+            align-items: center;
+            display: flex;
+
+        }
+
+        .navbar {
+
+            background-color: rgba(0, 0, 0, 0.897);
+            border-radius: 2px;
+            display: flex;
+            margin: auto;
+            justify-content: space-between;
+
+
+        }
+
+        .arama {
+            border-radius: 50px;
+            padding: 10px;
+            margin-right: 5px;
+        }
+
+        .buton {
+            border-radius: 50px;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.897);
+            color: white;
+            border-color: aliceblue;
+            border-width: 0.5px;
+            /* float: right; */
+        }
+
+        .cubuklar {
+            /* flex: 2;
+            clear: both; */
+            display: flex;
+            /* margin-left: auto;
+    margin-right: 20px; */
+            margin: 15px;
+            /* float: right; */
+        }
+
+        ul {
+            display: flex;
+            margin-left: auto;
+            float: right;
+            list-style: none;
+
+
+        }
+
+        ul li {
+            padding: 1px;
+            margin: 1px;
+
+        }
+
+        li a {
+            color: white;
+            text-align: center;
+            font-family: sans-serif;
+            text-decoration: none;
+            /* align-items: center;
+            justify-content: center;
+            margin: auto; */
+        }
+
+        /* --------------Navbar----------------  */
+
+
+        /* ------------Profile Card-----------------  */
+        body {
+
+            font-family: sans-serif;
+            background: rgb(140, 197, 255);
+        }
+
+        .container {
+            max-width: 300px;
+            max-height: 400px;
+            background: #fff;
+            margin: 50px auto;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            flex-direction: row
+        }
+
+        .mavi {
+            flex: 1;
+            padding-top: 40px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .beyaz {
+            flex: 3;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .pp {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            padding: 2px;
+            border: dodgerblue 1px solid;
+            background-color: #fff;
+        }
+
+        .pp:hover {
+            cursor: pointer;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            padding: 2px;
+            border: dodgerblue 1px solid;
+            background-color: #fff;
+        }
+
+        .mavi {
+            background-color: dodgerblue;
+            text-align: center;
+        }
+
+        .ad {
+            text-align: center;
+            margin: 20px 0 0 0;
+        }
+
+        .bio {
+            font-size: 14px;
+            color: #333;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .social {
+            text-align: center;
+            margin: 20px 0 0 0;
+
+        }
+
+        .social a {
+            text-decoration: none;
+            color: dodgerblue;
+            border-radius: 50px;
+        }
+
+        .social a i {
+            margin: 0 5px;
+            /* color: #333; */
+            font-size: 20px;
+
+            /* background-color: dodgerblue; */
+        }
+
+        .butonlar {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0 0 0;
+        }
+
+        .social a i:hover {
+            color: #fff;
+            background: dodgerblue;
+            border-radius: 50px;
+            padding: 5px;
+        }
+
+        .butonlar button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            border: none;
+            background: dodgerblue;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 25px;
+        }
+
+        .butonlar button:hover {
+            background: #fff;
+            color: dodgerblue;
+            border: dodgerblue 1px solid;
+            padding: 7px 15px;
+        }
+
+        .simgeler {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0 0 0;
+
+        }
+
+        .simge {
+            margin: 0 5px;
+            padding: 5px 10px;
+            border: none;
+            /* background: dodgerblue; */
+            color: #180202;
+            cursor: pointer;
+            border-radius: 25px;
+        }
+
+        .simge i {
+            cursor: pointer;
+            padding: 0.5px;
+        }
+
+        /* ------------Profile Card-----------------  */
+        /* ------------Card  Grid-----------------  */
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            margin-top: 50px;
+            width: 100%;
+        }
+
+        .card-satis:hover {
+            box-shadow: 3px 3px 5px rgba(247, 0, 0, 0.1);
+            cursor: pointer;
+
+        }
+
+        .card-satis {
+            max-width: 300px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 4.5px 2.5px 5px 5px rgba(175, 179, 175, 0.466);
+            border-radius: 25px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-satis img {
+            max-width: 100%;
+            height: auto;
+            max-height: 200px;
+            padding: 2px;
+        }
+
+        .card-satis img:hover {
+
+            cursor: pointer;
+            max-width: 100%;
+            height: auto;
+            max-height: 250px;
+            padding: 2px;
+
+        }
+
+        .card-satis .price {
+
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 0 0 2px rgba(151, 149, 149, 0.9);
+            border-radius: 50px;
+            padding: 10px;
+            margin: 10px 70px 0 70px;
+        }
+
+        .html {
+            color: rgb(165, 52, 0);
+            background: #ebe7e7;
+
+        }
+
+        .css {
+            color: rgb(0, 0, 255);
+            background: #ebe7e7;
+        }
+
+        .jscript {
+            color: rgb(255, 255, 0);
+            background: #000;
+        }
+
+        .react {
+            color: rgb(6, 167, 241);
+            background: #302d2d;
+        }
+
+        /* ------------Card Grid Finish-----------------  */
+    </style>
+</head>
+
+<body>
+    <!-- -----------navbar--------------- -->
+    <nav class="navbar">
+        <div class="logo"> <img class="logo-img" src="logo1.png" alt="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+            </ul>
+        </div>
+        <div class="cubuklar">
+            <input class="arama" type="text" placeholder="Search">
+            <button class="buton">Search</button>
+        </div>
+    </nav>
+    <!-- ------------Profile Card-----------------  -->
+    <div class="container">
+        <div>
+            <div class="mavi">
+                <img class="pp" src="imgpp.jpg" alt="Profile Image">
+            </div>
+            <div class="beyaz">
+                <div>
+                    <h2 class="ad">ReactMan</h2>
+                    <p class="bio">React Developer</p>
+                </div>
+                <div class="social">
+                    <a href="facebook.com/enesyilmaz1905" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="x.com/enesyilmaz_" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="linkedin.com/in/enesyilmaz1" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="instagram.com/enesyilmaz04" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="youtube.com/enesyilmaz1905" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                <div class="butonlar">
+                    <button>Subscribe</button>
+                    <button>Message</button>
+                </div>
+                <div class="simgeler">
+                    <div class="simge"><i class="fas fa-heart"></i>12.4K </div>
+                    <div class="simge"><i class="fas fa-comment">60.4K </i></div>
+                    <div class="simge"><i class="fas fa-paper-plane"></i>20K</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="card-grid">
+        <div class="card-satis">
+            <img src="html.png" alt="html">
+            <a href="">
+                <h3>HTML 5</h3>
+            </a>
+            <p>Hiper Metin İşaretleme Dili web sayfalarını oluşturmak için kullanılan standart metin işaretleme dilidir.
+            </p>
+            <p class="price html">$19.99</p>
+        </div>
+        <div class="card-satis">
+            <img src="css.png" alt="css">
+            <a href="">
+                <h3>CSS 3</h3>
+            </a>
+            <p>Cascading Style Sheets, HTML'e ek olarak metin ve format biçimlendirme alanında fazladan olanaklar sunan
+                bir işaretleme dilidir.</p>
+            <p class="price css">$29.99</p>
+        </div>
+        <div class="card-satis">
+            <img src="javascript.png" alt="js">
+            <a href="">
+                <h3>JavaScript</h3>
+            </a>
+            <p>JavaScript, HTML ve CSS ile birlikte World Wide Web'in temel teknolojilerinden biri olan programlama
+                dilidir. </p>
+            <p class="price jscript">$39.99</p>
+        </div>
+        <div class="card-satis">
+            <img src="react.png" alt="react">
+            <a href="">
+                <h3>React</h3>
+            </a>
+            <p>React, kullanıcı arayüzü oluşturmaya yarayan açık kaynak kodlu bir javascript kütüphanesidir. </p>
+            <p class="price react">$49.99</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
